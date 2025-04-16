@@ -1,0 +1,383 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.scrollbar-track-rounded::-webkit-scrollbar-track {
+  border-radius: 999px;
+}
+
+.scrollbar-thumb-rounded::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+}
+
+.animation-hover:after {
+  background: none repeat scroll 0 0 transparent;
+  content: '';
+  height: 2px;
+  transition:
+    width 0.3s ease 0s,
+    left 0.3s ease 0s;
+  @apply absolute bottom-0 left-1/2 block w-0 bg-gradient-to-r from-sky-500 via-green-500 to-yellow-500;
+}
+.animation-active:after {
+  @apply left-0 hidden;
+}
+.animation-hover:hover:after {
+  @apply left-0 w-full;
+}
+
+.onboard {
+  width: 100%;
+  height: 100vh;
+  max-height: 1900px;
+  background-size: cover;
+  position: relative;
+  background:
+    linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 1000px),
+    fixed 0 0 / 20px 20px radial-gradient(#313131 1px, transparent 0),
+    fixed 10px 10px / 20px 20px radial-gradient(#313131 1px, transparent 0);
+}
+
+#pattern {
+  width: 100%;
+  /* height: 100vh;
+	max-height: 900px; */
+  background-size: cover;
+  position: relative;
+  background:
+    linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 700px),
+    fixed 0 0 / 20px 20px radial-gradient(#313131 1px, transparent 0),
+    fixed 10px 10px / 20px 20px radial-gradient(#313131 1px, transparent 0);
+}
+
+#invite {
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-image: url(../public/gridd.webp);
+}
+
+#invite-bg,
+.invite-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-image: url(../public/gridd-bg.svg);
+}
+
+#interstellar {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(../public/interstellar.svg);
+  /* https://loading.io/background/ */
+}
+
+#title {
+  background:
+    linear-gradient(0deg, hsla(0, 0%, 10%, 0.4) 0, #000 min(350vw, 1200px)),
+    fixed repeating-radial-gradient(circle at 50% min(calc(50vw + 9rem), calc(300px + 5rem)), #050505 0, #000 70px);
+}
+
+#grid {
+  width: 100vw;
+  position: relative;
+  height: 100vh;
+  max-height: 700px;
+  overflow: hidden;
+  background-image: url(../public/grid.svg);
+}
+
+#grid:after,
+#grid:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  left: 0;
+  height: 30vh;
+  max-height: 400px;
+  pointer-events: none;
+}
+
+#grid:before {
+  top: 0;
+  z-index: 0;
+  background: linear-gradient(180deg, #000, transparent);
+}
+
+#grid:after {
+  bottom: 0;
+  z-index: 0;
+  background: linear-gradient(0deg, #000, transparent);
+}
+
+.grid-radial {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: radial-gradient(circle, transparent 0, #000 150%);
+  pointer-events: none;
+  z-index: 10;
+}
+
+#location {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(../public/ripple.svg);
+}
+
+.home_spotlight {
+  background: radial-gradient(50% 50% at 50% 50%, rgb(255, 255, 255) 0, hsla(0, 0%, 100%, 0) 100%);
+  opacity: 0.06;
+  transform: rotate(45deg);
+  width: 100%;
+  top: -80px;
+  max-width: 1800px;
+}
+
+.home_spotlight {
+  pointer-events: none;
+  position: absolute;
+  height: 100%;
+}
+
+#gallery {
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: 49%;
+  background-image: url(../public/gridd.webp);
+}
+
+#gridd-bg,
+.gridd-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-image: url(../public/gridd-bg.svg);
+}
+
+#countdown {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(../public/field.svg);
+  /* https://loading.io/background/ */
+}
+
+.container {
+  position: absolute;
+  z-index: -6;
+  inset: 0;
+  transition: perspective 3000ms ease 0s;
+}
+
+.lines {
+  --right: #00abfa;
+  --left: #ffd000;
+  position: absolute;
+  width: 200vw;
+  margin-left: -50%;
+  transform: translateY(0);
+  background-image: linear-gradient(to right, var(--left) 45%, /* rgba(0, 0, 0, 0) 50%, */ var(--right) 55%);
+  mask-image: linear-gradient(to right, rgba(0, 0, 0, 1) 2px, rgba(0, 0, 0, 0) 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 1) 2px, rgba(0, 0, 0, 0) 1px);
+  mask-size: 60px 60px;
+  overflow: hidden;
+  mask-repeat: repeat repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  inset: -100% 0px;
+  background-position-y: 100%;
+  mask-position: 50% 0px;
+}
+
+@media (min-width: 1024px) {
+  .lines {
+    mask-size: 80px 80px;
+  }
+}
+
+/* SWIPER CONTINOUS PLAY  */
+.swiper-continous-play > .swiper-wrapper {
+  transition-timing-function: linear;
+}
+
+.react-images__view {
+  display: flex;
+  justify-content: center;
+}
+
+.rotate-border::before {
+  content: '';
+  display: block;
+  height: 600px;
+  width: 600px;
+  position: absolute;
+  animation: rotate 4s linear infinite;
+  z-index: 0;
+}
+
+.rotate-border-1::before {
+  background: linear-gradient(90deg, rgb(2, 130, 61) 0%, rgb(0, 172, 246) 50%, rgba(234, 242, 0) 100%);
+}
+
+.rotate-border-2::before {
+  background: linear-gradient(90deg, rgba(234, 242, 0, 0.726) 0%, rgb(0, 172, 246) 40%, rgb(2, 130, 61) 100%);
+}
+
+.rotate-border-3::before {
+  background: linear-gradient(90deg, rgb(234, 242, 0) 0%, rgb(2, 130, 61) 50%, rgb(0, 172, 246) 100%);
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.shiny::after {
+  content: '';
+  position: absolute;
+  top: calc(var(--yy, 0) * 1px - 250px);
+  left: calc(var(--xx, 0) * 1px - 250px);
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(#edebeb, #3984ff00 50%);
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.shiny:hover::after {
+  opacity: 0.1;
+}
+
+:root {
+  --step: 5%;
+  --pattern: url('http://allyourhtml.club/carousel/pattern.webp') center / 75%;
+
+  --rainbow: repeating-linear-gradient(
+      0deg,
+      rgb(255, 119, 115) calc(var(--step) * 1),
+      rgba(255, 237, 95, 1) calc(var(--step) * 2),
+      rgba(168, 255, 95, 1) calc(var(--step) * 3),
+      rgba(131, 255, 247, 1) calc(var(--step) * 4),
+      rgba(120, 148, 255, 1) calc(var(--step) * 5),
+      rgb(216, 117, 255) calc(var(--step) * 6),
+      rgb(255, 119, 115) calc(var(--step) * 7)
+    )
+    0% var(--bg-y) / 200% 700%;
+  --diagonal: repeating-linear-gradient(
+      128deg,
+      #0e152e 0%,
+      hsl(180, 10%, 60%) 3.8%,
+      hsl(180, 10%, 60%) 4.5%,
+      hsl(180, 10%, 60%) 5.2%,
+      #0e152e 10%,
+      #0e152e 12%
+    )
+    var(--bg-x) var(--bg-y) / 300%;
+  --shade: radial-gradient(
+      farthest-corner circle at var(--x) var(--y),
+      rgba(255, 255, 255, 0.1) 12%,
+      rgba(255, 255, 255, 0.15) 20%,
+      rgba(255, 255, 255, 0.25) 120%
+    )
+    var(--bg-x) var(--bg-y) / 300%;
+}
+.card {
+  width: 256px;
+  height: 256px;
+  box-sizing: border-box;
+  position: relative;
+}
+.card__wrapper {
+  perspective: 500px;
+  position: absolute;
+  inset: 0;
+}
+.card__3d {
+  transform: rotateY(var(--r-x)) rotateX(var(--r-y));
+  position: absolute;
+  inset: 0;
+  clip-path: inset(0 0 0 0 round 48px);
+}
+.card__image {
+  clip-path: inset(0 0 0 0 round 48px);
+}
+.card__image img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* soft light */
+.card__layer1 {
+  position: absolute;
+  inset: 0;
+  z-index: 20;
+  mix-blend-mode: soft-light;
+  clip-path: inset(0 0 1px 0 round 48px);
+  background: radial-gradient(
+    farthest-corner circle at var(--x) var(--y),
+    rgba(255, 255, 255, 0.8) 10%,
+    rgba(255, 255, 255, 0.65) 20%,
+    rgba(255, 255, 255, 0) 90%
+  );
+}
+/* first crazy blend  */
+.card__layer2 {
+  position: absolute;
+  inset: 0;
+  z-index: 30;
+
+  mix-blend-mode: color-dodge;
+  will-change: background;
+  transition-property: opacity;
+  clip-path: inset(0 0 1px 0 round 48px);
+
+  background-blend-mode: hue, hue, hard-light, overlay;
+  background: var(--pattern), var(--rainbow), var(--diagonal);
+}
+
+.iframe-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding-top: 60%; /* 16:9 Aspect Ratio */
+}
+
+.iframe-responsive {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}

@@ -1,0 +1,25 @@
+.glow {
+  mix-blend-mode: normal;
+  filter: blur(75px);
+  will-change: filter;
+}
+
+.glowSmall {
+  filter: blur(32px);
+}
+
+.glowBlue {
+  background: linear-gradient(180deg, #58a5ff 0%, #a67af4 100%);
+}
+
+.glowPink {
+  background: linear-gradient(180deg, #ff3358 0%, #ff4fd8 100%);
+}
+
+.glowConic {
+  background: conic-gradient(from 180deg at 50% 50%, #f6862aa9 0deg, #53ba5bad 180deg, #2a8de9bb 360deg);
+}
+
+.glowGray {
+  background: rgba(0, 0, 0, 0.15);
+}
