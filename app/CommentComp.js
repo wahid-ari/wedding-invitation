@@ -84,7 +84,7 @@ export default function CommentComp() {
         </div>
       </div>
       <div className='relative z-[10] mx-auto max-w-xl items-center gap-1.5 p-4'>
-        <form className='' onSubmit={onSubmit}>
+        <form onSubmit={onSubmit}>
           <div className='rotate-border rotate-border-1 relative flex h-full w-full items-center justify-center overflow-hidden rounded-lg bg-transparent p-0.5'>
             <input
               ref={name}

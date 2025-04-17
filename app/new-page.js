@@ -38,6 +38,7 @@ const RoundedText = dynamic(() => import('@components/RoundedText'), {
 });
 
 export default function NewPage({ slug }) {
+  const [copied, setCopied] = useState(false);
   const { modalOpen, setModalOpen } = useShowModal();
   const recipient = recipients.find((item) => item.slug == slug) || { name: 'Tamu Undangan' };
   const time = useTime();
@@ -402,6 +403,17 @@ export default function NewPage({ slug }) {
                   <span className={eb.className}>{config.time}</span>
                 </h1>
               </FadeIn>
+              <div className='flex w-full justify-center'>
+                <a
+                  target='_blank'
+                  href='https://calendar.google.com/calendar/u/0/r/eventedit?text=The+Wedding+of+Arik+%26+Evin&dates=20250531T020000Z/20250531T060000Z&location=Gampeng,+Ngluyu,+Nganjuk&details=The+Wedding+of+Arik+%26+Evin'
+                  className='group relative mb-2 inline-flex items-center justify-center overflow-hidden rounded-lg bg-gradient-to-br from-yellow-600 via-green-500 to-sky-500 p-0.5 text-sm font-medium text-white focus:outline-none focus-visible:ring-1 focus-visible:ring-green-500 focus-visible:ring-offset-1 focus-visible:ring-offset-black group-hover:from-yellow-600 group-hover:via-green-600 group-hover:to-sky-500'
+                >
+                  <span className='relative rounded-md bg-black px-6 py-2 transition-all duration-75 ease-in group-hover:bg-opacity-0'>
+                    Save to Calendar
+                  </span>
+                </a>
+              </div>
             </div>
           </section>
 
@@ -431,7 +443,7 @@ export default function NewPage({ slug }) {
                     className='group relative mb-2 inline-flex items-center justify-center overflow-hidden rounded-lg bg-gradient-to-br from-yellow-600 via-green-500 to-sky-500 p-0.5 text-sm font-medium text-white focus:outline-none focus-visible:ring-1 focus-visible:ring-green-500 focus-visible:ring-offset-1 focus-visible:ring-offset-black group-hover:from-yellow-600 group-hover:via-green-600 group-hover:to-sky-500'
                   >
                     <span className='relative rounded-md bg-black px-6 py-2 transition-all duration-75 ease-in group-hover:bg-opacity-0'>
-                      {showMap ? 'Sembunyikan Map' : 'Tampilkan Map'}
+                      {showMap ? 'Hide Map' : 'Show Map'}
                     </span>
                   </button>
                 </div>
@@ -769,9 +781,21 @@ export default function NewPage({ slug }) {
                     >
                       <i>{config.woman_fullname} Nasikin A</i>
                     </p>
-                    <p className='bg-gradient-to-t from-white via-neutral-300 to-neutral-500 bg-clip-text text-center text-3xl font-semibold text-transparent'>
-                      {config.woman_card_number}
-                    </p>
+                    <p className='text-center text-3xl font-semibold text-white'>{config.woman_card_number}</p>
+                  </div>
+                  <div className='mt-4 flex justify-center'>
+                    <button
+                      title='Copy Account Number'
+                      onClick={() => {
+                        navigator.clipboard.writeText('64170 10441 14537');
+                        setCopied(true);
+                      }}
+                      className='group relative mb-2 inline-flex items-center justify-center overflow-hidden rounded-lg bg-gradient-to-br from-yellow-600 via-green-500 to-sky-500 p-0.5 text-sm font-medium text-white focus:outline-none focus-visible:ring-1 focus-visible:ring-green-500 focus-visible:ring-offset-1 focus-visible:ring-offset-black group-hover:from-yellow-600 group-hover:via-green-600 group-hover:to-sky-500'
+                    >
+                      <span className='relative rounded-md bg-black px-6 py-2 transition-all duration-75 ease-in group-hover:bg-opacity-0'>
+                        {copied ? 'Number Copied' : 'Copy Number'}
+                      </span>
+                    </button>
                   </div>
                 </FadeIn>
               </div>

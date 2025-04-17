@@ -72,7 +72,7 @@ export default function MyModal({ isOpen, closeModal }) {
                         </span>{' '}
                         {config.woman}
                       </h1>
-                      {/* <h3 className="text-5xl font-bold text-white mb-2 mt-8 text-transparent bg-clip-text bg-gradient-to-r from-yellow-500 via-green-600 to-sky-500">John & Jane</h3> */}
+                      {/* <h3 className="text-5xl font-bold text-white mb-2 mt-8 text-transparent bg-clip-text bg-gradient-to-r from-yellow-500 via-green-600 to-sky-500">Arik & Evin</h3> */}
 
                       <Border className='mx-auto w-56 sm:w-auto' />
 

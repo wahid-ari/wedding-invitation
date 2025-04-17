@@ -1,18 +1,46 @@
 export const recipients = [
   {
-    slug: 'john',
-    name: 'John',
+    slug: 'luluk',
+    name: 'Luluil Maknun',
   },
   {
-    slug: 'john-doe',
-    name: 'John Doe',
+    slug: 'ratna',
+    name: 'Dwi Ratna Sari',
   },
   {
-    slug: 'jane',
-    name: 'Jane',
+    slug: 'hevin',
+    name: 'Hevin Sulistyaningsih',
   },
   {
-    slug: 'jane-doe',
-    name: 'Jane Doe',
+    slug: 'ria',
+    name: 'Wamadatul Khoiriyah',
+  },
+  {
+    slug: 'frida',
+    name: 'Frida Yuana',
+  },
+  {
+    slug: 'fian',
+    name: 'Fian',
+  },
+  {
+    slug: 'salimah',
+    name: 'Salimah',
+  },
+  {
+    slug: 'tanti',
+    name: 'Tanti',
+  },
+  {
+    slug: 'diah',
+    name: 'Diah Dwi P',
+  },
+  {
+    slug: 'harianti',
+    name: 'Harianti',
+  },
+  {
+    slug: 'Novita',
+    name: 'Novita Yanna',
   },
 ];

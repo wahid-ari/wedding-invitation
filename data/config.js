@@ -1,6 +1,6 @@
 export const config = {
-  title: 'Next Invitation',
-  description: 'Next Invitation',
+  title: 'The Wedding of Arik & Evin',
+  description: 'Sabtu, 31 Mei 2025',
   man: 'Arik',
   man_image: 'wahid.jpg',
   man_fullname: 'Wahid Ari',
