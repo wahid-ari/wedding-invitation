@@ -857,7 +857,7 @@ export default function NewPage({ slug }) {
               initial='hidden'
               whileInView='visible'
               viewport={{ once: true }}
-              className='absolute -right-32 top-16 z-10'
+              className='absolute -right-32 top-16'
             >
               <motion.circle cx='100' cy='100' r='50' className='stroke-yellow-500/50' variants={draw} custom={1} />
             </motion.svg>
@@ -868,7 +868,7 @@ export default function NewPage({ slug }) {
               initial='hidden'
               whileInView='visible'
               viewport={{ once: true }}
-              className='absolute -right-16 top-16 z-10'
+              className='absolute -right-16 top-16'
             >
               <motion.line
                 x1='220'
@@ -890,7 +890,7 @@ export default function NewPage({ slug }) {
               />
             </motion.svg>
             <div className='relative flex h-screen items-center justify-center'>
-              <div className='-mt-16'>
+              <div>
                 <h1 className='bg-gradient-to-b from-white to-[#AAAAAA] bg-clip-text p-4 text-center text-5xl font-extrabold text-transparent md:text-6xl'>
                   <span className={eb.className}>Countdown</span>
                 </h1>
@@ -900,7 +900,7 @@ export default function NewPage({ slug }) {
                 <Countdown
                   date={config.date_countdown}
                   renderer={(props) => (
-                    <div className='mx-auto grid max-w-2xl grid-cols-1 gap-8 sm:grid-cols-4 md:gap-16'>
+                    <div className='mx-auto grid max-w-2xl grid-cols-1 gap-8 pb-32 sm:grid-cols-4 md:gap-16'>
                       <FadeIn delay={0.2}>
                         <div className='text-center'>
                           <p
