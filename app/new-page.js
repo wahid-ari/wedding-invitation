@@ -44,32 +44,36 @@ export default function NewPage({ slug }) {
   const time = useTime();
   const rotate = useTransform(time, [0, 15000], [0, 360], { clamp: false });
   const rainbow = [
-    '#eab308',
-    '#22c55e',
-    '#0ea5e9',
-    '#eab308',
-    '#22c55e',
-    '#0ea5e9',
-    '#eab308',
-    '#22c55e',
-    '#0ea5e9',
-    '#eab308',
-    '#22c55e',
-    '#0ea5e9',
+    '#fff',
+    '#f5f5f5',
+    // '#eab308',
+    // '#22c55e',
+    // '#0ea5e9',
+    // '#eab308',
+    // '#22c55e',
+    // '#0ea5e9',
+    // '#eab308',
+    // '#22c55e',
+    // '#0ea5e9',
+    // '#eab308',
+    // '#22c55e',
+    // '#0ea5e9',
   ];
   const rainboww = [
-    '#0ea5e9',
-    '#eab308',
-    '#22c55e',
-    '#0ea5e9',
-    '#eab308',
-    '#22c55e',
-    '#0ea5e9',
-    '#eab308',
-    '#22c55e',
-    '#0ea5e9',
-    '#eab308',
-    '#22c55e',
+    '#fff',
+    '#f5f5f5',
+    // '#0ea5e9',
+    // '#eab308',
+    // '#22c55e',
+    // '#0ea5e9',
+    // '#eab308',
+    // '#22c55e',
+    // '#0ea5e9',
+    // '#eab308',
+    // '#22c55e',
+    // '#0ea5e9',
+    // '#eab308',
+    // '#22c55e',
   ];
   const { scrollYProgress } = useScroll();
   const range = Array.from(Array(rainbow.length).keys()).map((v) => v / (rainbow.length - 1));
@@ -781,7 +785,9 @@ export default function NewPage({ slug }) {
                     >
                       <i>{config.woman_fullname} Nasikin A</i>
                     </p>
-                    <p className='text-center text-3xl font-semibold text-white'>{config.woman_card_number}</p>
+                    <p className='text-center text-xl font-semibold text-white sm:text-2xl md:text-3xl'>
+                      {config.woman_card_number}
+                    </p>
                   </div>
                   <div className='mt-4 flex justify-center'>
                     <button
@@ -889,7 +895,7 @@ export default function NewPage({ slug }) {
                 custom={2.5}
               />
             </motion.svg>
-            <div className='relative flex h-screen items-center justify-center'>
+            <div className='relative flex min-h-screen items-center justify-center'>
               <div>
                 <h1 className='bg-gradient-to-b from-white to-[#AAAAAA] bg-clip-text p-4 text-center text-5xl font-extrabold text-transparent md:text-6xl'>
                   <span className={eb.className}>Countdown</span>
