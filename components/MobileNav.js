@@ -738,22 +738,22 @@ export default function MobileNav() {
           >
             <LinkScroll
               activeClass='active'
-              to='event'
-              href='/#event'
+              to='date'
+              href='/#date'
               spy={true}
               smooth={true}
-              aria-label='Schedule'
-              title='Schedule'
+              aria-label='Date'
+              title='Date'
               duration={1000}
               onSetActive={() => {
-                setActiveLink('event');
+                setActiveLink('date');
               }}
               className={`animation-hover 
-            ${activeLink === 'event' ? ' animation-active bg-gradient-to-br from-sky-500 via-green-500 to-yellow-500 bg-clip-text text-transparent' : 'bg-gradient-to-b from-white to-[#AAAAAA] bg-clip-text text-transparent'} 
+            ${activeLink === 'date' ? ' animation-active bg-gradient-to-br from-sky-500 via-green-500 to-yellow-500 bg-clip-text text-transparent' : 'bg-gradient-to-b from-white to-[#AAAAAA] bg-clip-text text-transparent'} 
             flex cursor-pointer flex-col items-center gap-2 px-0.5 py-1 text-sm font-bold transition-all`}
             >
-              <span className='hidden sm:block'>SCHEDULE</span>
-              {activeLink === 'event' ? (
+              <span className='hidden sm:block'>DATE</span>
+              {activeLink === 'date' ? (
                 <CalendarIcon className='block h-6 w-6 pb-1 sm:hidden' />
               ) : (
                 <Calendar className='block h-6 w-6 pb-1 sm:hidden' />

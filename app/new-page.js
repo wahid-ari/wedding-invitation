@@ -13,6 +13,8 @@ import Carousel, { Modal, ModalGateway } from 'react-images';
 
 import styles from '@components/index.module.css';
 
+import bri from '../public/bri.png';
+
 import '@splidejs/react-splide/css';
 
 import { albums } from '@data/albums';
@@ -79,8 +81,8 @@ export default function NewPage({ slug }) {
   const range = Array.from(Array(rainbow.length).keys()).map((v) => v / (rainbow.length - 1));
   const rainbowColors = useTransform(scrollYProgress, range, rainbow);
   const rainbowColorss = useTransform(scrollYProgress, range, rainboww);
-  const forwardX = useTransform(scrollYProgress, [0, 1], ['-100%', '300%']);
-  const backwardsX = useTransform(scrollYProgress, [0, 1], ['100%', '-300%']);
+  const forwardX = useTransform(scrollYProgress, [0, 1], ['-87%', '300%']);
+  const backwardsX = useTransform(scrollYProgress, [0, 1], ['87%', '-300%']);
 
   const draw = {
     hidden: { pathLength: 0, opacity: 0 },
@@ -378,7 +380,7 @@ export default function NewPage({ slug }) {
             </div>
           </section>
 
-          <section id='event' className='relative my-10 flex h-screen w-full items-center justify-center md:my-20'>
+          <section id='date' className='relative my-10 flex h-screen w-full items-center justify-center md:my-20'>
             <motion.div
               className='absolute inset-0'
               style={{
@@ -391,8 +393,8 @@ export default function NewPage({ slug }) {
             />
             <div className='home_spotlight'></div>
             <div className='z-10 text-white'>
-              <h1 className='z-10 mx-6 mb-4 bg-gradient-to-b from-white to-[#AAAAAA] bg-clip-text text-center text-5xl font-extrabold leading-tight text-transparent md:text-6xl'>
-                <span className={eb.className}>Schedule</span>
+              <h1 className='z-10 mx-6 mb-4 bg-gradient-to-b from-white to-[#AAAAAA] bg-clip-text text-center text-4xl font-extrabold leading-tight text-transparent md:text-5xl'>
+                <span className={eb.className}>The Date</span>
               </h1>
               <div className='mb-12 flex justify-center'>
                 <Pattern />
@@ -771,11 +773,11 @@ export default function NewPage({ slug }) {
                   <div className='flex flex-col items-center justify-center gap-3'>
                     <Image
                       alt='BRI'
-                      src={`/bri.png`}
-                      width={170}
-                      height={100}
-                      sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
-                      className='mt-3 object-cover object-center'
+                      src={bri}
+                      sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 3vw'
+                      className='object-cover object-center'
+                      width={150}
+                      height={80}
                     />
                     <p
                       className={cn(
