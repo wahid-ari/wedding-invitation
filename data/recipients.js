@@ -40,7 +40,7 @@ export const recipients = [
     name: 'Harianti',
   },
   {
-    slug: 'Novita',
+    slug: 'novita',
     name: 'Novita Yanna',
   },
 ];
