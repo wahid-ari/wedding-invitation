@@ -43,4 +43,12 @@ export const recipients = [
     slug: 'novita',
     name: 'Novita Yanna',
   },
+  {
+    slug: 'agytia',
+    name: 'Agytia',
+  },
+  {
+    slug: 'anis',
+    name: 'Anis Epita',
+  },
 ];
