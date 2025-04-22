@@ -21,6 +21,7 @@ import { albums } from '@data/albums';
 import { config } from '@data/config';
 import { recipients } from '@data/recipients';
 import { useShowModal } from '@utils/GlobalContext';
+import titleCase from '@utils/helper';
 
 import { FadeIn } from '@components/FadeIn';
 import { GlobeDraggable } from '@components/Globe';
@@ -42,7 +43,11 @@ const RoundedText = dynamic(() => import('@components/RoundedText'), {
 export default function NewPage({ slug }) {
   const [copied, setCopied] = useState(false);
   const { modalOpen, setModalOpen } = useShowModal();
-  const recipient = recipients.find((item) => item.slug == slug) || { name: 'Tamu Undangan' };
+  let recipient = recipients.find((item) => item.slug == slug);
+  if (recipient == undefined) {
+    if (slug) recipient = { name: titleCase(slug) };
+    else recipient = { name: 'Tamu Undangan' };
+  }
   const time = useTime();
   const rotate = useTransform(time, [0, 15000], [0, 360], { clamp: false });
   const rainbow = [

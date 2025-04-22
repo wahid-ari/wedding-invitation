@@ -1,10 +1,15 @@
 import { config } from '@data/config';
 import { recipients } from '@data/recipients';
+import titleCase from '@utils/helper';
 
 import NewPage from './new-page';
 
 export async function generateMetadata({ searchParams }, parent) {
-  const recipient = recipients.find((item) => item.slug == searchParams.to) || { name: 'Tamu Undangan' };
+  let recipient = recipients.find((item) => item.slug == searchParams.to);
+  if (recipient == undefined) {
+    if (searchParams.to) recipient = { name: titleCase(searchParams.to) };
+    else recipient = { name: 'Tamu Undangan' };
+  }
   const image = recipient.name !== 'Tamu Undangan' ? `/og?name=${recipient.name}` : '/og.png';
   const previousImages = (await parent).openGraph?.images || [];
   return {
