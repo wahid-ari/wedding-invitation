@@ -10,7 +10,7 @@ export const config = {
   woman_fullname: 'Evin Nurul',
   woman_card_number: '64170 10441 14537',
   date: 'Sabtu, 31 Mei 2025',
-  time: '9:00 - 13:00',
+  time: '10:00 - 14:00',
   date_countdown: '2025-5-31',
   location: 'Nganjuk',
   street: 'Dusun Gampeng, Desa Gampeng, Kecamatan Ngluyu.',

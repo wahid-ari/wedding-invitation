@@ -6,6 +6,7 @@ import moment, { updateLocale } from 'moment';
 import useSWR, { useSWRConfig } from 'swr';
 
 import Pattern from '@components/Pattern';
+import { TextAnimate } from '@components/TextAnimate';
 
 const eb = EB_Garamond({ subsets: ['latin'] });
 
@@ -50,8 +51,12 @@ export default function CommentComp() {
       <div className='absolute top-0 h-0.5 w-full bg-gradient-to-r from-orange-500 to-sky-500 opacity-10' />
       <span className='absolute bottom-0 left-0 right-0 z-[1] h-16 w-full bg-gradient-to-t from-black to-transparent' />
       <div className='py-10 pt-16'>
-        <h1 className='relative z-10 bg-gradient-to-b from-white to-[#AAAAAA] bg-clip-text p-4 text-center text-5xl font-extrabold text-transparent md:text-6xl'>
-          <span className={eb.className}>Comment</span>
+        <h1 className='relative z-10 bg-gradient-to-b from-white to-[#AAAAAA] bg-clip-text p-4 text-center text-5xl font-extrabold md:text-6xl'>
+          <span className={eb.className}>
+            <TextAnimate animation='slideRight' by='character' duration={0.5}>
+              Comment
+            </TextAnimate>
+          </span>
         </h1>
         <div className='relative z-10 flex justify-center'>
           <Pattern />

@@ -24,12 +24,15 @@ import { useShowModal } from '@utils/GlobalContext';
 import titleCase from '@utils/helper';
 
 import { FadeIn } from '@components/FadeIn';
+import { FlipText } from '@components/FlipText';
 import { GlobeDraggable } from '@components/Globe';
 import { Gradient } from '@components/Gradient';
 import HoverCard from '@components/HoverCard';
 import MobileNav, { Border } from '@components/MobileNav';
 import MyModal from '@components/MyModal';
 import Pattern from '@components/Pattern';
+import { TextAnimate } from '@components/TextAnimate';
+import { TypingAnimation } from '@components/TypingAnimation';
 
 import CommentComp from './CommentComp';
 
@@ -371,16 +374,28 @@ export default function NewPage({ slug }) {
             />
             <div className={cn(eb.className, 'z-10 mx-4 max-w-xl text-center text-xl text-white sm:text-2xl')}>
               <FadeIn delay={0.3}>
-                <p className='bg-gradient-to-b from-white via-neutral-100 to-neutral-200 bg-clip-text px-4 text-center text-xl font-semibold text-transparent sm:text-2xl'>
+                <TextAnimate
+                  animation='fadeIn'
+                  by='line'
+                  as='p'
+                  duration={2}
+                  className='bg-gradient-to-b from-white via-neutral-100 to-neutral-200 bg-clip-text text-xl sm:text-2xl'
+                >
+                  {`Di antara tanda-tanda (kebesaran)-Nya ialah bahwa Dia\n\nmenciptakan pasangan-pasangan untukmu dari (jenis)\n\ndirimu sendiri agar kamu merasa tenteram kepadanya.\n\nDia menjadikan di antaramu rasa cinta dan kasih sayang.\n\nSesungguhnya pada yang demikian itu benar-benar\n\nterdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir.`}
+                </TextAnimate>
+                {/* <p className='bg-gradient-to-b from-white via-neutral-100 to-neutral-200 bg-clip-text px-4 text-center text-xl font-semibold text-transparent sm:text-2xl'>
                   Di antara tanda-tanda (kebesaran)-Nya ialah bahwa Dia menciptakan pasangan-pasangan untukmu dari
                   (jenis) dirimu sendiri agar kamu merasa tenteram kepadanya. Dia menjadikan di antaramu rasa cinta dan
                   kasih sayang. Sesungguhnya pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah)
                   bagi kaum yang berpikir.
-                </p>
+                </p> */}
               </FadeIn>
               <Border className='mx-auto my-2' />
               <FadeIn delay={0.4}>
-                <span className='-mt-2 font-medium italic'>(Q.S Ar-Rum : 21)</span>
+                <TextAnimate animation='slideLeft' by='character' duration={2} className='-mt-2 font-medium italic'>
+                  (Q.S Ar-Rum : 21)
+                </TextAnimate>
+                {/* <span className='-mt-2 font-medium italic'>(Q.S Ar-Rum : 21)</span> */}
               </FadeIn>
             </div>
           </section>
@@ -398,18 +413,22 @@ export default function NewPage({ slug }) {
             />
             <div className='home_spotlight'></div>
             <div className='z-10 text-white'>
-              <h1 className='z-10 mx-6 mb-4 bg-gradient-to-b from-white to-[#AAAAAA] bg-clip-text text-center text-4xl font-extrabold leading-tight text-transparent md:text-5xl'>
-                <span className={eb.className}>The Date</span>
+              <h1 className='z-10 mx-6 mb-4 bg-gradient-to-b from-white to-[#AAAAAA] bg-clip-text text-center text-4xl font-extrabold leading-tight md:text-5xl'>
+                <span className={eb.className}>
+                  <TextAnimate animation='slideLeft' by='character' duration={0.5}>
+                    The Date
+                  </TextAnimate>
+                </span>
               </h1>
               <div className='mb-12 flex justify-center'>
                 <Pattern />
               </div>
-              <FadeIn delay={0.2}>
+              <FadeIn delay={0.5}>
                 <h1 className='z-10 mx-6 mb-4 bg-gradient-to-b from-white to-[#AAAAAA] bg-clip-text text-center text-3xl font-extrabold leading-tight text-transparent lg:text-4xl'>
                   <span className={eb.className}>{config.date}</span>
                 </h1>
               </FadeIn>
-              <FadeIn delay={0.3}>
+              <FadeIn delay={0.8}>
                 <h1 className='z-10 mx-6 mb-4 bg-gradient-to-b from-white to-[#AAAAAA] bg-clip-text text-center text-2xl font-extrabold leading-tight text-transparent lg:text-3xl'>
                   <span className={eb.className}>{config.time}</span>
                 </h1>
@@ -417,7 +436,7 @@ export default function NewPage({ slug }) {
               <div className='flex w-full justify-center'>
                 <a
                   target='_blank'
-                  href='https://calendar.google.com/calendar/u/0/r/eventedit?text=The+Wedding+of+Arik+%26+Evin&dates=20250531T020000Z/20250531T060000Z&location=Gampeng,+Ngluyu,+Nganjuk&details=The+Wedding+of+Arik+%26+Evin'
+                  href='https://calendar.google.com/calendar/u/0/r/eventedit?text=The+Wedding+of+Arik+%26+Evin&dates=20250531T030000Z/20250531T070000Z&location=Gampeng,+Ngluyu,+Nganjuk&details=The+Wedding+of+Arik+%26+Evin'
                   className='group relative mb-2 inline-flex items-center justify-center overflow-hidden rounded-lg bg-gradient-to-br from-yellow-600 via-green-500 to-sky-500 p-0.5 text-sm font-medium text-white focus:outline-none focus-visible:ring-1 focus-visible:ring-green-500 focus-visible:ring-offset-1 focus-visible:ring-offset-black group-hover:from-yellow-600 group-hover:via-green-600 group-hover:to-sky-500'
                 >
                   <span className='relative rounded-md bg-black px-6 py-2 transition-all duration-75 ease-in group-hover:bg-opacity-0'>
@@ -433,18 +452,22 @@ export default function NewPage({ slug }) {
             className='relative flex h-screen min-h-screen items-center justify-center pb-28 pt-16 md:pt-44'
           >
             <div>
-              <h1 className='mb-4 bg-gradient-to-b from-white to-[#AAAAAA] bg-clip-text text-center text-5xl font-extrabold text-transparent md:-mt-32 md:text-6xl'>
-                <span className={eb.className}>Location</span>
+              <h1 className='mb-4 bg-gradient-to-b from-white to-[#AAAAAA] bg-clip-text text-center text-5xl font-extrabold md:-mt-32 md:text-6xl'>
+                <span className={eb.className}>
+                  <TextAnimate animation='slideRight' by='character' duration={0.5}>
+                    Location
+                  </TextAnimate>
+                </span>
               </h1>
               <div className='mb-16 flex justify-center'>
                 <Pattern />
               </div>
-              <FadeIn delay={0.2}>
+              <FadeIn delay={0.5}>
                 <h1 className='z-10 mx-6 mb-2 bg-gradient-to-b from-white to-[#AAAAAA] bg-clip-text pb-2 text-center text-3xl font-extrabold leading-tight text-transparent lg:text-4xl'>
                   <span className={eb.className}>{config.street}</span>
                 </h1>
               </FadeIn>
-              <FadeIn delay={0.3}>
+              <FadeIn delay={0.8}>
                 <h1 className='z-10 mx-6 mb-2 bg-gradient-to-b from-white to-[#AAAAAA] bg-clip-text pb-2 text-center text-3xl font-extrabold leading-tight text-transparent lg:text-4xl'>
                   <span className={eb.className}>{config.address}</span>
                 </h1>
@@ -483,8 +506,12 @@ export default function NewPage({ slug }) {
             className='relative flex min-h-screen items-center justify-between pb-36 pt-20 md:pb-16'
           >
             <div>
-              <h1 className='relative z-20 mb-4 bg-gradient-to-b from-white to-[#AAAAAA] bg-clip-text text-center text-5xl font-extrabold text-transparent md:text-6xl'>
-                <span className={eb.className}>Gallery</span>
+              <h1 className='relative z-20 mb-4 bg-gradient-to-b from-white to-[#AAAAAA] bg-clip-text text-center text-5xl font-extrabold md:text-6xl'>
+                <span className={eb.className}>
+                  <TextAnimate animation='slideLeft' by='character' duration={0.5}>
+                    Gallery
+                  </TextAnimate>
+                </span>
               </h1>
               <div className='relative z-10 mb-20 flex justify-center md:mb-14'>
                 <Pattern />
@@ -696,15 +723,17 @@ export default function NewPage({ slug }) {
           >
             <div>
               <FadeIn delay={0.3}>
-                <p
+                <div
                   className={cn(
                     eb.className,
-                    'max-w-lg bg-gradient-to-b from-white via-neutral-100 to-neutral-200 bg-clip-text px-4 text-center text-xl font-semibold text-transparent sm:text-2xl',
+                    'max-w-lg bg-gradient-to-b from-white via-neutral-100 to-neutral-200 bg-clip-text px-4 text-center text-xl font-semibold sm:text-2xl',
                   )}
                 >
-                  Merupakan suatu kehormatan dan kebahagiaan bagi kami, apabila Bapak/Ibu/Saudara/i berkenan hadir dan
-                  memberikan doa restu. Atas kehadiran dan doa restunya, kami mengucapkan terima kasih.
-                </p>
+                  <TextAnimate animation='blurIn' duration={2}>
+                    Merupakan suatu kehormatan dan kebahagiaan bagi kami, apabila Bapak/Ibu/Saudara/i berkenan hadir dan
+                    memberikan doa restu. Atas kehadiran dan doa restunya, kami mengucapkan terima kasih.
+                  </TextAnimate>
+                </div>
               </FadeIn>
               <FadeIn delay={0.4}>
                 <div className='mt-12 flex justify-center'>
@@ -713,24 +742,29 @@ export default function NewPage({ slug }) {
               </FadeIn>
               <FadeIn delay={0.5}>
                 <div className='mt-8 flex items-center justify-center gap-4 px-4 italic'>
-                  <h1
+                  {/* <h1
                     className={cn(
                       eb.className,
                       'bg-gradient-to-b from-white via-neutral-300 to-neutral-500 bg-clip-text py-2 pl-2 text-3xl font-bold italic text-transparent sm:text-4xl md:text-left md:text-5xl',
                     )}
                   >
-                    <i>{config.man}</i>
-                  </h1>
-                  <h1 className='bg-gradient-to-b from-yellow-500 via-green-500 to-sky-500 bg-clip-text text-3xl font-extrabold text-transparent sm:text-4xl md:text-center md:text-5xl'>
-                    &
-                  </h1>
+                    <i>{config.man}</i>{' '}
+                    <span className='bg-gradient-to-b from-yellow-500 via-green-500 to-sky-500 bg-clip-text text-3xl font-extrabold text-transparent sm:text-4xl md:text-center md:text-5xl'>
+                      &
+                    </span>{' '}
+                    <i>{config.woman}</i>
+                  </h1> */}
                   <h1
                     className={cn(
                       eb.className,
-                      'bg-gradient-to-t from-white via-neutral-300 to-neutral-500 bg-clip-text px-2 py-2 text-3xl font-bold italic text-transparent sm:text-4xl md:text-left md:text-5xl',
+                      'text-transparen bg-gradient-to-b from-white via-neutral-300 to-neutral-500 bg-clip-text py-2 pl-2 text-3xl font-bold italic sm:text-4xl md:text-left md:text-5xl',
                     )}
                   >
-                    <i>{config.woman}</i>
+                    <i>
+                      <TextAnimate animation='blurInUp' duration={2} by='character'>
+                        Arik & Evin
+                      </TextAnimate>
+                    </i>
                   </h1>
                 </div>
               </FadeIn>
@@ -741,9 +775,13 @@ export default function NewPage({ slug }) {
 
           <section id='bank' className='relative h-full min-h-screen w-full overflow-hidden'>
             <div className='absolute top-0 h-0.5 w-full bg-gradient-to-r from-orange-500 to-sky-500 opacity-10' />
-            <div className='pb-32 pt-24'>
-              <h1 className='bg-gradient-to-b from-white to-[#AAAAAA] bg-clip-text p-4 text-center text-5xl font-extrabold text-transparent md:text-6xl'>
-                <span className={eb.className}>Gift</span>
+            <div className='pb-28 pt-24'>
+              <h1 className='bg-gradient-to-b from-white to-[#AAAAAA] bg-clip-text p-4 text-center text-5xl font-extrabold md:text-6xl'>
+                <span className={eb.className}>
+                  <TextAnimate animation='slideLeft' by='character' duration={0.5}>
+                    Gift
+                  </TextAnimate>
+                </span>
               </h1>
               <div className='relative z-10 flex justify-center'>
                 <Pattern />
@@ -774,7 +812,7 @@ export default function NewPage({ slug }) {
                     </p>
                   </div>
                 </FadeIn> */}
-                <FadeIn delay={0.3}>
+                <FadeIn delay={0.4}>
                   <div className='flex flex-col items-center justify-center gap-3'>
                     <Image
                       alt='BRI'
@@ -787,7 +825,7 @@ export default function NewPage({ slug }) {
                     <p
                       className={cn(
                         eb.className,
-                        'bg-gradient-to-t from-white via-neutral-300 to-neutral-500 bg-clip-text px-2 py-2 text-center text-3xl font-bold italic text-transparent md:text-left md:text-4xl',
+                        'bg-gradient-to-t from-white via-neutral-300 to-neutral-500 bg-clip-text px-2 pb-2 pt-10 text-center text-3xl font-bold italic text-transparent md:text-left md:text-4xl',
                       )}
                     >
                       <i>{config.woman_fullname} Nasikin A</i>
@@ -904,8 +942,12 @@ export default function NewPage({ slug }) {
             </motion.svg>
             <div className='relative flex min-h-screen items-center justify-center'>
               <div>
-                <h1 className='bg-gradient-to-b from-white to-[#AAAAAA] bg-clip-text p-4 text-center text-5xl font-extrabold text-transparent md:text-6xl'>
-                  <span className={eb.className}>Countdown</span>
+                <h1 className='bg-gradient-to-b from-white to-[#AAAAAA] bg-clip-text p-4 text-center text-5xl font-extrabold md:text-6xl'>
+                  <span className={eb.className}>
+                    <TextAnimate animation='slideRight' by='character' duration={0.5}>
+                      Countdown
+                    </TextAnimate>
+                  </span>
                 </h1>
                 <div className='relative z-10 mb-16 flex justify-center sm:mb-32'>
                   <Pattern />
