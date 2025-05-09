@@ -375,14 +375,12 @@ export default function NewPage({ slug }) {
             <div className={cn(eb.className, 'z-10 mx-4 max-w-xl text-center text-xl text-white sm:text-2xl')}>
               {/* <FadeIn delay={0.5}> */}
               <TextAnimate
-                animation='slideUp'
-                by='word'
-                as='p'
+                animation='blurIn'
                 duration={2}
                 once={true}
                 className='bg-gradient-to-b from-white via-neutral-100 to-neutral-200 bg-clip-text text-xl sm:text-2xl'
               >
-                {`Di antara tanda-tanda (kebesaran)-Nya ialah bahwa Dia menciptakan pasangan-pasangan untukmu dari (jenis) dirimu sendiri agar kamu merasa tenteram kepadanya. Dia menjadikan di antaramu rasa cinta dan kasih sayang. Sesungguhnya pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir.`}
+                Di antara tanda-tanda (kebesaran)-Nya ialah bahwa Dia menciptakan pasangan-pasangan untukmu dari (jenis) dirimu sendiri agar kamu merasa tenteram kepadanya. Dia menjadikan di antaramu rasa cinta dan kasih sayang. Sesungguhnya pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir.
               </TextAnimate>
               {/* <p className='bg-gradient-to-b from-white via-neutral-100 to-neutral-200 bg-clip-text px-4 text-center text-xl font-semibold text-transparent sm:text-2xl'>
                   Di antara tanda-tanda (kebesaran)-Nya ialah bahwa Dia menciptakan pasangan-pasangan untukmu dari
