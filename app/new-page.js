@@ -391,12 +391,12 @@ export default function NewPage({ slug }) {
                 </p>
               </FadeIn>
               <Border className='mx-auto my-2 mt-8' />
-              {/* <FadeIn delay={0.4}> */}
-              <TextAnimate animation='slideLeft' by='character' duration={1} className='-mt-2 font-medium italic'>
+              <FadeIn delay={0.7}>
+                {/* <TextAnimate animation='slideLeft' by='character' duration={1} className='-mt-2 font-medium italic'>
                 (Q.S Ar-Rum : 21)
-              </TextAnimate>
-              {/* <span className='-mt-2 font-medium italic'>(Q.S Ar-Rum : 21)</span> */}
-              {/* </FadeIn> */}
+              </TextAnimate> */}
+                <span className='-mt-2 font-medium italic'>(Q.S Ar-Rum : 21)</span>
+              </FadeIn>
             </div>
           </section>
 
@@ -729,10 +729,12 @@ export default function NewPage({ slug }) {
                     'max-w-lg bg-gradient-to-b from-white via-neutral-100 to-neutral-200 bg-clip-text px-4 text-center text-xl font-semibold sm:text-2xl',
                   )}
                 >
-                  <TextAnimate animation='blurIn' duration={2}>
+                  {/* <TextAnimate animation='blurIn' duration={2}>
                     Merupakan suatu kehormatan dan kebahagiaan bagi kami, apabila Bapak/Ibu/Saudara/i berkenan hadir dan
                     memberikan doa restu. Atas kehadiran dan doa restunya, kami mengucapkan terima kasih.
-                  </TextAnimate>
+                  </TextAnimate> */}
+                  Merupakan suatu kehormatan dan kebahagiaan bagi kami, apabila Bapak/Ibu/Saudara/i berkenan hadir dan
+                  memberikan doa restu. Atas kehadiran dan doa restunya, kami mengucapkan terima kasih.
                 </div>
               </FadeIn>
               <FadeIn delay={0.4}>
@@ -742,7 +744,7 @@ export default function NewPage({ slug }) {
               </FadeIn>
               <FadeIn delay={0.5}>
                 <div className='mt-8 flex items-center justify-center gap-4 px-4 italic'>
-                  {/* <h1
+                  <h1
                     className={cn(
                       eb.className,
                       'bg-gradient-to-b from-white via-neutral-300 to-neutral-500 bg-clip-text py-2 pl-2 text-3xl font-bold italic text-transparent sm:text-4xl md:text-left md:text-5xl',
@@ -753,8 +755,8 @@ export default function NewPage({ slug }) {
                       &
                     </span>{' '}
                     <i>{config.woman}</i>
-                  </h1> */}
-                  <h1
+                  </h1>
+                  {/* <h1
                     className={cn(
                       eb.className,
                       'text-transparen bg-gradient-to-b from-white via-neutral-300 to-neutral-500 bg-clip-text py-2 pl-2 text-3xl font-bold italic sm:text-4xl md:text-left md:text-5xl',
@@ -765,13 +767,13 @@ export default function NewPage({ slug }) {
                         Arik & Evin
                       </TextAnimate>
                     </i>
-                  </h1>
+                  </h1> */}
                 </div>
               </FadeIn>
             </div>
           </section>
 
-          <CommentComp />
+          {/* <CommentComp /> */}
 
           <section id='bank' className='relative h-full min-h-screen w-full overflow-hidden'>
             <div className='absolute top-0 h-0.5 w-full bg-gradient-to-r from-orange-500 to-sky-500 opacity-10' />
