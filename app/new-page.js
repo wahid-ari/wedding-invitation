@@ -373,30 +373,37 @@ export default function NewPage({ slug }) {
               }}
             />
             <div className={cn(eb.className, 'z-10 mx-4 max-w-xl text-center text-xl text-white sm:text-2xl')}>
-              <FadeIn delay={0.5}>
-                {/* <TextAnimate
+              {/* <FadeIn delay={0.5}> */}
+              <TextAnimate
                 animation='slideUp'
                 by='word'
                 as='p'
                 duration={2}
+                once={true}
                 className='bg-gradient-to-b from-white via-neutral-100 to-neutral-200 bg-clip-text text-xl sm:text-2xl'
               >
                 {`Di antara tanda-tanda (kebesaran)-Nya ialah bahwa Dia menciptakan pasangan-pasangan untukmu dari (jenis) dirimu sendiri agar kamu merasa tenteram kepadanya. Dia menjadikan di antaramu rasa cinta dan kasih sayang. Sesungguhnya pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir.`}
-              </TextAnimate> */}
-                <p className='bg-gradient-to-b from-white via-neutral-100 to-neutral-200 bg-clip-text px-4 text-center text-xl font-semibold text-transparent sm:text-2xl'>
+              </TextAnimate>
+              {/* <p className='bg-gradient-to-b from-white via-neutral-100 to-neutral-200 bg-clip-text px-4 text-center text-xl font-semibold text-transparent sm:text-2xl'>
                   Di antara tanda-tanda (kebesaran)-Nya ialah bahwa Dia menciptakan pasangan-pasangan untukmu dari
                   (jenis) dirimu sendiri agar kamu merasa tenteram kepadanya. Dia menjadikan di antaramu rasa cinta dan
                   kasih sayang. Sesungguhnya pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah)
                   bagi kaum yang berpikir.
-                </p>
-              </FadeIn>
+                </p> */}
+              {/* </FadeIn> */}
               <Border className='mx-auto my-2 mt-8' />
-              <FadeIn delay={0.7}>
-                {/* <TextAnimate animation='slideLeft' by='character' duration={1} className='-mt-2 font-medium italic'>
+              {/* <FadeIn delay={0.7}> */}
+              <TextAnimate
+                animation='slideLeft'
+                by='character'
+                duration={1}
+                once={true}
+                className='-mt-2 font-medium italic'
+              >
                 (Q.S Ar-Rum : 21)
-              </TextAnimate> */}
-                <span className='-mt-2 font-medium italic'>(Q.S Ar-Rum : 21)</span>
-              </FadeIn>
+              </TextAnimate>
+              {/* <span className='-mt-2 font-medium italic'>(Q.S Ar-Rum : 21)</span> */}
+              {/* </FadeIn> */}
             </div>
           </section>
 
@@ -722,29 +729,29 @@ export default function NewPage({ slug }) {
             className='relative flex min-h-screen w-full items-center justify-center overflow-hidden'
           >
             <div>
-              <FadeIn delay={0.3}>
-                <div
-                  className={cn(
-                    eb.className,
-                    'max-w-lg bg-gradient-to-b from-white via-neutral-100 to-neutral-200 bg-clip-text px-4 text-center text-xl font-semibold sm:text-2xl',
-                  )}
-                >
-                  {/* <TextAnimate animation='blurIn' duration={2}>
-                    Merupakan suatu kehormatan dan kebahagiaan bagi kami, apabila Bapak/Ibu/Saudara/i berkenan hadir dan
-                    memberikan doa restu. Atas kehadiran dan doa restunya, kami mengucapkan terima kasih.
-                  </TextAnimate> */}
+              {/* <FadeIn delay={0.3}> */}
+              <div
+                className={cn(
+                  eb.className,
+                  'max-w-lg bg-gradient-to-b from-white via-neutral-100 to-neutral-200 bg-clip-text px-4 text-center text-xl font-semibold sm:text-2xl',
+                )}
+              >
+                <TextAnimate animation='blurIn' duration={2} once={true}>
                   Merupakan suatu kehormatan dan kebahagiaan bagi kami, apabila Bapak/Ibu/Saudara/i berkenan hadir dan
                   memberikan doa restu. Atas kehadiran dan doa restunya, kami mengucapkan terima kasih.
-                </div>
-              </FadeIn>
+                </TextAnimate>
+                {/* Merupakan suatu kehormatan dan kebahagiaan bagi kami, apabila Bapak/Ibu/Saudara/i berkenan hadir dan
+                  memberikan doa restu. Atas kehadiran dan doa restunya, kami mengucapkan terima kasih. */}
+              </div>
+              {/* </FadeIn> */}
               <FadeIn delay={0.4}>
                 <div className='mt-12 flex justify-center'>
                   <Border />
                 </div>
               </FadeIn>
-              <FadeIn delay={0.5}>
-                <div className='mt-8 flex items-center justify-center gap-4 px-4 italic'>
-                  <h1
+              {/* <FadeIn delay={0.5}> */}
+              <div className='mt-8 flex items-center justify-center gap-4 px-4 italic'>
+                {/* <h1
                     className={cn(
                       eb.className,
                       'bg-gradient-to-b from-white via-neutral-300 to-neutral-500 bg-clip-text py-2 pl-2 text-3xl font-bold italic text-transparent sm:text-4xl md:text-left md:text-5xl',
@@ -755,21 +762,21 @@ export default function NewPage({ slug }) {
                       &
                     </span>{' '}
                     <i>{config.woman}</i>
-                  </h1>
-                  {/* <h1
-                    className={cn(
-                      eb.className,
-                      'text-transparen bg-gradient-to-b from-white via-neutral-300 to-neutral-500 bg-clip-text py-2 pl-2 text-3xl font-bold italic sm:text-4xl md:text-left md:text-5xl',
-                    )}
-                  >
-                    <i>
-                      <TextAnimate animation='blurInUp' duration={2} by='character'>
-                        Arik & Evin
-                      </TextAnimate>
-                    </i>
                   </h1> */}
-                </div>
-              </FadeIn>
+                <h1
+                  className={cn(
+                    eb.className,
+                    'text-transparen bg-gradient-to-b from-white via-neutral-300 to-neutral-500 bg-clip-text py-2 pl-2 text-3xl font-bold italic sm:text-4xl md:text-left md:text-5xl',
+                  )}
+                >
+                  <i>
+                    <TextAnimate animation='blurInUp' duration={2} by='character' once={true}>
+                      Arik & Evin
+                    </TextAnimate>
+                  </i>
+                </h1>
+              </div>
+              {/* </FadeIn> */}
             </div>
           </section>
 
