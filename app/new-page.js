@@ -373,30 +373,30 @@ export default function NewPage({ slug }) {
               }}
             />
             <div className={cn(eb.className, 'z-10 mx-4 max-w-xl text-center text-xl text-white sm:text-2xl')}>
-              <FadeIn delay={0.3}>
-                <TextAnimate
-                  animation='fadeIn'
-                  by='line'
-                  as='p'
-                  duration={2}
-                  className='bg-gradient-to-b from-white via-neutral-100 to-neutral-200 bg-clip-text text-xl sm:text-2xl'
-                >
-                  {`Di antara tanda-tanda (kebesaran)-Nya ialah bahwa Dia\n\nmenciptakan pasangan-pasangan untukmu dari (jenis)\n\ndirimu sendiri agar kamu merasa tenteram kepadanya.\n\nDia menjadikan di antaramu rasa cinta dan kasih sayang.\n\nSesungguhnya pada yang demikian itu benar-benar\n\nterdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir.`}
-                </TextAnimate>
-                {/* <p className='bg-gradient-to-b from-white via-neutral-100 to-neutral-200 bg-clip-text px-4 text-center text-xl font-semibold text-transparent sm:text-2xl'>
+              {/* <FadeIn delay={0.3}> */}
+              <TextAnimate
+                animation='slideUp'
+                by='word'
+                as='p'
+                duration={2}
+                className='bg-gradient-to-b from-white via-neutral-100 to-neutral-200 bg-clip-text text-xl sm:text-2xl'
+              >
+                {`Di antara tanda-tanda (kebesaran)-Nya ialah bahwa Dia menciptakan pasangan-pasangan untukmu dari (jenis) dirimu sendiri agar kamu merasa tenteram kepadanya. Dia menjadikan di antaramu rasa cinta dan kasih sayang. Sesungguhnya pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir.`}
+              </TextAnimate>
+              {/* <p className='bg-gradient-to-b from-white via-neutral-100 to-neutral-200 bg-clip-text px-4 text-center text-xl font-semibold text-transparent sm:text-2xl'>
                   Di antara tanda-tanda (kebesaran)-Nya ialah bahwa Dia menciptakan pasangan-pasangan untukmu dari
                   (jenis) dirimu sendiri agar kamu merasa tenteram kepadanya. Dia menjadikan di antaramu rasa cinta dan
                   kasih sayang. Sesungguhnya pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah)
                   bagi kaum yang berpikir.
                 </p> */}
-              </FadeIn>
-              <Border className='mx-auto my-2' />
-              <FadeIn delay={0.4}>
-                <TextAnimate animation='slideLeft' by='character' duration={2} className='-mt-2 font-medium italic'>
-                  (Q.S Ar-Rum : 21)
-                </TextAnimate>
-                {/* <span className='-mt-2 font-medium italic'>(Q.S Ar-Rum : 21)</span> */}
-              </FadeIn>
+              {/* </FadeIn> */}
+              <Border className='mx-auto my-2 mt-8' />
+              {/* <FadeIn delay={0.4}> */}
+              <TextAnimate animation='slideLeft' by='character' duration={2} className='-mt-2 font-medium italic'>
+                (Q.S Ar-Rum : 21)
+              </TextAnimate>
+              {/* <span className='-mt-2 font-medium italic'>(Q.S Ar-Rum : 21)</span> */}
+              {/* </FadeIn> */}
             </div>
           </section>
 

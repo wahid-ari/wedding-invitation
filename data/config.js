@@ -13,7 +13,7 @@ export const config = {
   time: '10:00 - 14:00',
   date_countdown: '2025-5-31',
   location: 'Nganjuk',
-  street: 'Dusun Gampeng, Desa Gampeng, Kecamatan Ngluyu.',
+  street: 'Dsn Gampeng, Desa Gampeng, Kec Ngluyu.',
   address: 'Nganjuk, Jawa Timur',
   music: 'music.mp3',
 };
