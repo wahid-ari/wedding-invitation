@@ -734,10 +734,10 @@ export default function NewPage({ slug }) {
                   'max-w-lg bg-gradient-to-b from-white via-neutral-100 to-neutral-200 bg-clip-text px-4 text-center text-xl font-semibold sm:text-2xl',
                 )}
               >
-                <TextAnimate animation='blurIn' duration={2} once={true}>
+                {/* <TextAnimate animation='blurIn' duration={2} once={true}>
                   Merupakan suatu kehormatan dan kebahagiaan bagi kami, apabila Bapak/Ibu/Saudara/i berkenan hadir dan
                   memberikan doa restu. Atas kehadiran dan doa restunya, kami mengucapkan terima kasih.
-                </TextAnimate>
+                </TextAnimate> */}
                 {/* Merupakan suatu kehormatan dan kebahagiaan bagi kami, apabila Bapak/Ibu/Saudara/i berkenan hadir dan
                   memberikan doa restu. Atas kehadiran dan doa restunya, kami mengucapkan terima kasih. */}
               </div>
@@ -761,7 +761,7 @@ export default function NewPage({ slug }) {
                     </span>{' '}
                     <i>{config.woman}</i>
                   </h1> */}
-                <h1
+                {/* <h1
                   className={cn(
                     eb.className,
                     'text-transparen bg-gradient-to-b from-white via-neutral-300 to-neutral-500 bg-clip-text py-2 pl-2 text-3xl font-bold italic sm:text-4xl md:text-left md:text-5xl',
@@ -772,7 +772,7 @@ export default function NewPage({ slug }) {
                       Arik & Evin
                     </TextAnimate>
                   </i>
-                </h1>
+                </h1> */}
               </div>
               {/* </FadeIn> */}
             </div>
