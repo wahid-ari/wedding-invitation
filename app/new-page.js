@@ -357,17 +357,18 @@ export default function NewPage({ slug }) {
             </div>
             <span className='absolute left-0 right-0 top-0 h-10 w-full bg-gradient-to-b from-black to-transparent' />
             <span className='absolute bottom-0 left-0 right-0 z-[1] h-10 w-full bg-gradient-to-t from-black to-transparent' />
-            {/* <Gradient width={1500} height={100} className='bottom-[-200px] opacity-10' small conic /> */}
+            <Gradient width={1500} height={300} className='bottom-[-200px] opacity-10' small conic />
           </section>
 
-          <section id='grid' className='flex h-screen w-full items-center justify-center'>
+          <section id='grid' className='relative flex h-screen w-full items-center justify-center'>
             <div className='grid-radial'></div>
-            <motion.div
+            <Gradient width={500} height={300} className='opacity-20' smal conic />
+            {/* <motion.div
               id='gridd-bg'
               animate={{
                 scale: [1, 1.1, 1, 0.9],
               }}
-            />
+            /> */}
             <div className={cn(eb.className, 'z-10 mx-4 max-w-xl text-center text-xl text-white sm:text-2xl')}>
               <FadeIn delay={0.5}>
                 {/* <TextAnimate
