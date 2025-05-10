@@ -364,7 +364,7 @@ export default function NewPage({ slug }) {
             <Gradient width={1500} height={300} className='bottom-[-200px] opacity-10' small conic />
           </section>
 
-          <section id='gri' className='flex h-screen w-full items-center justify-center'>
+          {/* <section id='gri' className='flex h-screen w-full items-center justify-center'> */}
             {/* <div className='grid-radial'></div> */}
             {/* <motion.div
               id='gridd-bg'
@@ -372,7 +372,7 @@ export default function NewPage({ slug }) {
                 scale: [1, 1.1, 1, 0.9],
               }}
             /> */}
-            <div className={cn(eb.className, 'z-10 mx-4 max-w-xl text-center text-xl text-white sm:text-2xl')}>
+            {/* <div className={cn(eb.className, 'z-10 mx-4 max-w-xl text-center text-xl text-white sm:text-2xl')}> */}
               {/* <FadeIn delay={0.5}> */}
               {/* <TextAnimate
                 animation='blurIn'
@@ -389,7 +389,7 @@ export default function NewPage({ slug }) {
                   bagi kaum yang berpikir.
                 </p> */}
               {/* </FadeIn> */}
-              <Border className='mx-auto my-2 mt-8' />
+              {/* <Border className='mx-auto my-2 mt-8' /> */}
               {/* <FadeIn delay={0.7}> */}
               {/* <TextAnimate
                 animation='slideLeft'
@@ -402,8 +402,8 @@ export default function NewPage({ slug }) {
               </TextAnimate> */}
               {/* <span className='-mt-2 font-medium italic'>(Q.S Ar-Rum : 21)</span> */}
               {/* </FadeIn> */}
-            </div>
-          </section>
+            {/* </div> */}
+          {/* </section> */}
 
           <section id='date' className='relative my-10 flex h-screen w-full items-center justify-center md:my-20'>
             <motion.div
