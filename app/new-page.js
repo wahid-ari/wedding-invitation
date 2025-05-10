@@ -374,14 +374,14 @@ export default function NewPage({ slug }) {
             />
             <div className={cn(eb.className, 'z-10 mx-4 max-w-xl text-center text-xl text-white sm:text-2xl')}>
               {/* <FadeIn delay={0.5}> */}
-              <TextAnimate
+              {/* <TextAnimate
                 animation='blurIn'
                 duration={2}
                 once={true}
                 className='bg-gradient-to-b from-white via-neutral-100 to-neutral-200 bg-clip-text text-xl sm:text-2xl'
               >
                 Di antara tanda-tanda (kebesaran)-Nya ialah bahwa Dia menciptakan pasangan-pasangan untukmu dari (jenis) dirimu sendiri agar kamu merasa tenteram kepadanya. Dia menjadikan di antaramu rasa cinta dan kasih sayang. Sesungguhnya pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir.
-              </TextAnimate>
+              </TextAnimate> */}
               {/* <p className='bg-gradient-to-b from-white via-neutral-100 to-neutral-200 bg-clip-text px-4 text-center text-xl font-semibold text-transparent sm:text-2xl'>
                   Di antara tanda-tanda (kebesaran)-Nya ialah bahwa Dia menciptakan pasangan-pasangan untukmu dari
                   (jenis) dirimu sendiri agar kamu merasa tenteram kepadanya. Dia menjadikan di antaramu rasa cinta dan
@@ -391,7 +391,7 @@ export default function NewPage({ slug }) {
               {/* </FadeIn> */}
               <Border className='mx-auto my-2 mt-8' />
               {/* <FadeIn delay={0.7}> */}
-              <TextAnimate
+              {/* <TextAnimate
                 animation='slideLeft'
                 by='character'
                 duration={1}
@@ -399,7 +399,7 @@ export default function NewPage({ slug }) {
                 className='-mt-2 font-medium italic'
               >
                 (Q.S Ar-Rum : 21)
-              </TextAnimate>
+              </TextAnimate> */}
               {/* <span className='-mt-2 font-medium italic'>(Q.S Ar-Rum : 21)</span> */}
               {/* </FadeIn> */}
             </div>
@@ -785,9 +785,10 @@ export default function NewPage({ slug }) {
             <div className='pb-28 pt-24'>
               <h1 className='bg-gradient-to-b from-white to-[#AAAAAA] bg-clip-text p-4 text-center text-5xl font-extrabold md:text-6xl'>
                 <span className={eb.className}>
-                  <TextAnimate animation='slideLeft' by='character' duration={0.5}>
+                  {/* <TextAnimate animation='slideLeft' by='character' duration={0.5}>
                     Gift
-                  </TextAnimate>
+                  </TextAnimate> */}
+                  Gift
                 </span>
               </h1>
               <div className='relative z-10 flex justify-center'>
