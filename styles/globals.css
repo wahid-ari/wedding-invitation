@@ -46,6 +46,15 @@ body {
     fixed 10px 10px / 20px 20px radial-gradient(#313131 1px, transparent 0);
 }
 
+#welcome {
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-image: url(../public/gridd.webp);
+  background-color: rgba(0, 0, 0, 0.25);
+  background-blend-mode: overlay;
+}
+
 #pattern {
   width: 100%;
   /* height: 100vh;

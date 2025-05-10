@@ -24,7 +24,6 @@ import { useShowModal } from '@utils/GlobalContext';
 import titleCase from '@utils/helper';
 
 import { FadeIn } from '@components/FadeIn';
-import { FlipText } from '@components/FlipText';
 import { GlobeDraggable } from '@components/Globe';
 import { Gradient } from '@components/Gradient';
 import HoverCard from '@components/HoverCard';
@@ -32,9 +31,6 @@ import MobileNav, { Border } from '@components/MobileNav';
 import MyModal from '@components/MyModal';
 import Pattern from '@components/Pattern';
 import { TextAnimate } from '@components/TextAnimate';
-import { TypingAnimation } from '@components/TypingAnimation';
-
-import CommentComp from './CommentComp';
 
 const eb = EB_Garamond({ subsets: ['latin'] });
 const merienda = Merienda({ subsets: ['latin'] });
@@ -331,7 +327,7 @@ export default function NewPage({ slug }) {
 
           <section id='title' className='relative flex h-screen min-h-screen w-full items-center sm:py-32'>
             <div className='w-full text-center'>
-              {/* <motion.p
+              <motion.p
                 className='whitespace-nowrap bg-gradient-to-b from-black to-neutral-800 bg-clip-text py-16 text-6xl font-bold tracking-wide text-transparent lg:text-8xl'
                 style={{
                   x: forwardX,
@@ -342,11 +338,11 @@ export default function NewPage({ slug }) {
                 <span className={eb.className}>
                   <i>{config.man_fullname}</i>
                 </span>
-              </motion.p> */}
+              </motion.p>
               <h1 className='z-10 bg-gradient-to-b from-yellow-500 via-green-500 to-sky-500 bg-clip-text p-4 text-5xl font-extrabold text-transparent md:text-center lg:text-6xl'>
                 /
               </h1>
-              {/* <motion.p
+              <motion.p
                 className='whitespace-nowrap bg-gradient-to-b from-black to-neutral-800 bg-clip-text py-16 text-6xl font-bold tracking-wide text-transparent md:pb-32 lg:text-8xl'
                 style={{
                   x: backwardsX,
@@ -357,24 +353,24 @@ export default function NewPage({ slug }) {
                 <span className={eb.className}>
                   <i>{config.woman_fullname}</i>
                 </span>
-              </motion.p> */}
+              </motion.p>
             </div>
             <span className='absolute left-0 right-0 top-0 h-10 w-full bg-gradient-to-b from-black to-transparent' />
             <span className='absolute bottom-0 left-0 right-0 z-[1] h-10 w-full bg-gradient-to-t from-black to-transparent' />
-            {/* <Gradient width={1500} height={300} className='bottom-[-200px] opacity-10' small conic /> */}
+            {/* <Gradient width={1500} height={100} className='bottom-[-200px] opacity-10' small conic /> */}
           </section>
 
-          {/* <section id='gri' className='flex h-screen w-full items-center justify-center'> */}
-            {/* <div className='grid-radial'></div> */}
-            {/* <motion.div
+          <section id='grid' className='flex h-screen w-full items-center justify-center'>
+            <div className='grid-radial'></div>
+            <motion.div
               id='gridd-bg'
               animate={{
                 scale: [1, 1.1, 1, 0.9],
               }}
-            /> */}
-            {/* <div className={cn(eb.className, 'z-10 mx-4 max-w-xl text-center text-xl text-white sm:text-2xl')}> */}
-              {/* <FadeIn delay={0.5}> */}
-              {/* <TextAnimate
+            />
+            <div className={cn(eb.className, 'z-10 mx-4 max-w-xl text-center text-xl text-white sm:text-2xl')}>
+              <FadeIn delay={0.5}>
+                {/* <TextAnimate
                 animation='blurIn'
                 duration={2}
                 once={true}
@@ -382,16 +378,16 @@ export default function NewPage({ slug }) {
               >
                 Di antara tanda-tanda (kebesaran)-Nya ialah bahwa Dia menciptakan pasangan-pasangan untukmu dari (jenis) dirimu sendiri agar kamu merasa tenteram kepadanya. Dia menjadikan di antaramu rasa cinta dan kasih sayang. Sesungguhnya pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir.
               </TextAnimate> */}
-              {/* <p className='bg-gradient-to-b from-white via-neutral-100 to-neutral-200 bg-clip-text px-4 text-center text-xl font-semibold text-transparent sm:text-2xl'>
+                <p className='bg-gradient-to-b from-white via-neutral-100 to-neutral-200 bg-clip-text px-4 text-center text-xl font-semibold text-transparent sm:text-2xl'>
                   Di antara tanda-tanda (kebesaran)-Nya ialah bahwa Dia menciptakan pasangan-pasangan untukmu dari
                   (jenis) dirimu sendiri agar kamu merasa tenteram kepadanya. Dia menjadikan di antaramu rasa cinta dan
                   kasih sayang. Sesungguhnya pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah)
                   bagi kaum yang berpikir.
-                </p> */}
-              {/* </FadeIn> */}
-              {/* <Border className='mx-auto my-2 mt-8' /> */}
+                </p>
+              </FadeIn>
+              <Border className='mx-auto my-2 mt-8' />
               {/* <FadeIn delay={0.7}> */}
-              {/* <TextAnimate
+              <TextAnimate
                 animation='slideLeft'
                 by='character'
                 duration={1}
@@ -399,11 +395,11 @@ export default function NewPage({ slug }) {
                 className='-mt-2 font-medium italic'
               >
                 (Q.S Ar-Rum : 21)
-              </TextAnimate> */}
+              </TextAnimate>
               {/* <span className='-mt-2 font-medium italic'>(Q.S Ar-Rum : 21)</span> */}
               {/* </FadeIn> */}
-            {/* </div> */}
-          {/* </section> */}
+            </div>
+          </section>
 
           <section id='date' className='relative my-10 flex h-screen w-full items-center justify-center md:my-20'>
             <motion.div
@@ -420,7 +416,7 @@ export default function NewPage({ slug }) {
             <div className='z-10 text-white'>
               <h1 className='z-10 mx-6 mb-4 bg-gradient-to-b from-white to-[#AAAAAA] bg-clip-text text-center text-4xl font-extrabold leading-tight md:text-5xl'>
                 <span className={eb.className}>
-                  <TextAnimate animation='slideLeft' by='character' duration={0.5}>
+                  <TextAnimate animation='slideLeft' duration={0.5} once={true}>
                     The Date
                   </TextAnimate>
                 </span>
@@ -459,7 +455,7 @@ export default function NewPage({ slug }) {
             <div>
               <h1 className='mb-4 bg-gradient-to-b from-white to-[#AAAAAA] bg-clip-text text-center text-5xl font-extrabold md:-mt-32 md:text-6xl'>
                 <span className={eb.className}>
-                  <TextAnimate animation='slideRight' by='character' duration={0.5}>
+                  <TextAnimate animation='slideRight' once={true} duration={0.5}>
                     Location
                   </TextAnimate>
                 </span>
@@ -513,7 +509,7 @@ export default function NewPage({ slug }) {
             <div>
               <h1 className='relative z-20 mb-4 bg-gradient-to-b from-white to-[#AAAAAA] bg-clip-text text-center text-5xl font-extrabold md:text-6xl'>
                 <span className={eb.className}>
-                  <TextAnimate animation='slideLeft' by='character' duration={0.5}>
+                  <TextAnimate animation='slideLeft' once={true} duration={0.5}>
                     Gallery
                   </TextAnimate>
                 </span>
@@ -734,10 +730,10 @@ export default function NewPage({ slug }) {
                   'max-w-lg bg-gradient-to-b from-white via-neutral-100 to-neutral-200 bg-clip-text px-4 text-center text-xl font-semibold sm:text-2xl',
                 )}
               >
-                {/* <TextAnimate animation='blurIn' duration={2} once={true}>
+                <TextAnimate animation='blurIn' duration={2} once={true}>
                   Merupakan suatu kehormatan dan kebahagiaan bagi kami, apabila Bapak/Ibu/Saudara/i berkenan hadir dan
                   memberikan doa restu. Atas kehadiran dan doa restunya, kami mengucapkan terima kasih.
-                </TextAnimate> */}
+                </TextAnimate>
                 {/* Merupakan suatu kehormatan dan kebahagiaan bagi kami, apabila Bapak/Ibu/Saudara/i berkenan hadir dan
                   memberikan doa restu. Atas kehadiran dan doa restunya, kami mengucapkan terima kasih. */}
               </div>
@@ -761,18 +757,18 @@ export default function NewPage({ slug }) {
                     </span>{' '}
                     <i>{config.woman}</i>
                   </h1> */}
-                {/* <h1
+                <h1
                   className={cn(
                     eb.className,
                     'text-transparen bg-gradient-to-b from-white via-neutral-300 to-neutral-500 bg-clip-text py-2 pl-2 text-3xl font-bold italic sm:text-4xl md:text-left md:text-5xl',
                   )}
                 >
                   <i>
-                    <TextAnimate animation='blurInUp' duration={2} by='character' once={true}>
+                    <TextAnimate animation='blurInUp' duration={2} once={true}>
                       Arik & Evin
                     </TextAnimate>
                   </i>
-                </h1> */}
+                </h1>
               </div>
               {/* </FadeIn> */}
             </div>
@@ -785,10 +781,9 @@ export default function NewPage({ slug }) {
             <div className='pb-28 pt-24'>
               <h1 className='bg-gradient-to-b from-white to-[#AAAAAA] bg-clip-text p-4 text-center text-5xl font-extrabold md:text-6xl'>
                 <span className={eb.className}>
-                  {/* <TextAnimate animation='slideLeft' by='character' duration={0.5}>
+                  <TextAnimate animation='slideLeft' once={true} duration={0.5}>
                     Gift
-                  </TextAnimate> */}
-                  Gift
+                  </TextAnimate>
                 </span>
               </h1>
               <div className='relative z-10 flex justify-center'>
@@ -952,7 +947,7 @@ export default function NewPage({ slug }) {
               <div>
                 <h1 className='bg-gradient-to-b from-white to-[#AAAAAA] bg-clip-text p-4 text-center text-5xl font-extrabold md:text-6xl'>
                   <span className={eb.className}>
-                    <TextAnimate animation='slideRight' by='character' duration={0.5}>
+                    <TextAnimate animation='slideRight' once={true} duration={0.5}>
                       Countdown
                     </TextAnimate>
                   </span>
