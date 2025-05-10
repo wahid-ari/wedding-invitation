@@ -364,14 +364,14 @@ export default function NewPage({ slug }) {
             <Gradient width={1500} height={300} className='bottom-[-200px] opacity-10' small conic />
           </section>
 
-          <section id='grid' className='flex h-screen w-full items-center justify-center'>
-            <div className='grid-radial'></div>
-            <motion.div
+          <section id='gri' className='flex h-screen w-full items-center justify-center'>
+            {/* <div className='grid-radial'></div> */}
+            {/* <motion.div
               id='gridd-bg'
               animate={{
                 scale: [1, 1.1, 1, 0.9],
               }}
-            />
+            /> */}
             <div className={cn(eb.className, 'z-10 mx-4 max-w-xl text-center text-xl text-white sm:text-2xl')}>
               {/* <FadeIn delay={0.5}> */}
               {/* <TextAnimate
