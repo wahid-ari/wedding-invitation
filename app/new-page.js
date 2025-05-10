@@ -331,7 +331,7 @@ export default function NewPage({ slug }) {
 
           <section id='title' className='relative flex h-screen min-h-screen w-full items-center sm:py-32'>
             <div className='w-full text-center'>
-              <motion.p
+              {/* <motion.p
                 className='whitespace-nowrap bg-gradient-to-b from-black to-neutral-800 bg-clip-text py-16 text-6xl font-bold tracking-wide text-transparent lg:text-8xl'
                 style={{
                   x: forwardX,
@@ -342,11 +342,11 @@ export default function NewPage({ slug }) {
                 <span className={eb.className}>
                   <i>{config.man_fullname}</i>
                 </span>
-              </motion.p>
+              </motion.p> */}
               <h1 className='z-10 bg-gradient-to-b from-yellow-500 via-green-500 to-sky-500 bg-clip-text p-4 text-5xl font-extrabold text-transparent md:text-center lg:text-6xl'>
                 /
               </h1>
-              <motion.p
+              {/* <motion.p
                 className='whitespace-nowrap bg-gradient-to-b from-black to-neutral-800 bg-clip-text py-16 text-6xl font-bold tracking-wide text-transparent md:pb-32 lg:text-8xl'
                 style={{
                   x: backwardsX,
@@ -357,11 +357,11 @@ export default function NewPage({ slug }) {
                 <span className={eb.className}>
                   <i>{config.woman_fullname}</i>
                 </span>
-              </motion.p>
+              </motion.p> */}
             </div>
             <span className='absolute left-0 right-0 top-0 h-10 w-full bg-gradient-to-b from-black to-transparent' />
             <span className='absolute bottom-0 left-0 right-0 z-[1] h-10 w-full bg-gradient-to-t from-black to-transparent' />
-            <Gradient width={1500} height={300} className='bottom-[-200px] opacity-10' small conic />
+            {/* <Gradient width={1500} height={300} className='bottom-[-200px] opacity-10' small conic /> */}
           </section>
 
           {/* <section id='gri' className='flex h-screen w-full items-center justify-center'> */}
