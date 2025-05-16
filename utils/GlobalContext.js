@@ -5,7 +5,7 @@ import { createContext, useContext, useState } from 'react';
 export const GlobalContext = createContext(null);
 
 export function GlobalProvider({ children }) {
-  const [modalOpen, setModalOpen] = useState(true);
+  const [modalOpen, setModalOpen] = useState(false);
 
   return <GlobalContext.Provider value={{ modalOpen, setModalOpen }}>{children}</GlobalContext.Provider>;
 }

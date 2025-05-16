@@ -370,7 +370,7 @@ export default function NewPage({ slug }) {
               }}
             /> */}
             <div className={cn(eb.className, 'z-10 mx-4 max-w-xl text-center text-xl text-white sm:text-2xl')}>
-              <FadeIn delay={0.5}>
+              <FadeIn delay={0.4}>
                 {/* <TextAnimate
                 animation='blurIn'
                 duration={2}
@@ -387,8 +387,7 @@ export default function NewPage({ slug }) {
                 </p>
               </FadeIn>
               <Border className='mx-auto my-2 mt-8' />
-              {/* <FadeIn delay={0.7}> */}
-              <TextAnimate
+              {/* <TextAnimate
                 animation='slideLeft'
                 by='character'
                 duration={1}
@@ -396,9 +395,10 @@ export default function NewPage({ slug }) {
                 className='-mt-2 font-medium italic'
               >
                 (Q.S Ar-Rum : 21)
-              </TextAnimate>
-              {/* <span className='-mt-2 font-medium italic'>(Q.S Ar-Rum : 21)</span> */}
-              {/* </FadeIn> */}
+              </TextAnimate> */}
+              <FadeIn delay={0.8}>
+                <span className='-mt-2 font-medium italic'>(Q.S Ar-Rum : 21)</span>
+              </FadeIn>
             </div>
           </section>
 
@@ -415,11 +415,11 @@ export default function NewPage({ slug }) {
             />
             <div className='home_spotlight'></div>
             <div className='z-10 text-white'>
-              <h1 className='z-10 mx-6 mb-4 bg-gradient-to-b from-white to-[#AAAAAA] bg-clip-text text-center text-4xl font-extrabold leading-tight md:text-5xl'>
+              <h1 className='z-10 mx-6 mb-4 bg-gradient-to-b from-white to-[#AAAAAA] bg-clip-text text-center text-4xl font-extrabold leading-tight text-transparent md:text-5xl'>
                 <span className={eb.className}>
-                  <TextAnimate animation='slideLeft' duration={0.5} once={true}>
-                    The Date
-                  </TextAnimate>
+                  {/* <TextAnimate animation='slideLeft' duration={0.5} once={true}> */}
+                  The Date
+                  {/* </TextAnimate> */}
                 </span>
               </h1>
               <div className='mb-12 flex justify-center'>
@@ -454,11 +454,11 @@ export default function NewPage({ slug }) {
             className='relative flex h-screen min-h-screen items-center justify-center pb-28 pt-16 md:pt-44'
           >
             <div>
-              <h1 className='mb-4 bg-gradient-to-b from-white to-[#AAAAAA] bg-clip-text text-center text-5xl font-extrabold md:-mt-32 md:text-6xl'>
+              <h1 className='mb-4 bg-gradient-to-b from-white to-[#AAAAAA] bg-clip-text text-center text-5xl font-extrabold text-transparent md:-mt-32 md:text-6xl'>
                 <span className={eb.className}>
-                  <TextAnimate animation='slideRight' once={true} duration={0.5}>
-                    Location
-                  </TextAnimate>
+                  {/* <TextAnimate animation='slideRight' once={true} duration={0.5}> */}
+                  Location
+                  {/* </TextAnimate> */}
                 </span>
               </h1>
               <div className='mb-16 flex justify-center'>
@@ -508,11 +508,11 @@ export default function NewPage({ slug }) {
             className='relative flex min-h-screen items-center justify-between pb-36 pt-20 md:pb-16'
           >
             <div>
-              <h1 className='relative z-20 mb-4 bg-gradient-to-b from-white to-[#AAAAAA] bg-clip-text text-center text-5xl font-extrabold md:text-6xl'>
+              <h1 className='relative z-20 mb-4 bg-gradient-to-b from-white to-[#AAAAAA] bg-clip-text text-center text-5xl font-extrabold text-transparent md:text-6xl'>
                 <span className={eb.className}>
-                  <TextAnimate animation='slideLeft' once={true} duration={0.5}>
-                    Gallery
-                  </TextAnimate>
+                  {/* <TextAnimate animation='slideLeft' once={true} duration={0.5}> */}
+                  Gallery
+                  {/* </TextAnimate> */}
                 </span>
               </h1>
               <div className='relative z-10 mb-20 flex justify-center md:mb-14'>
@@ -724,29 +724,29 @@ export default function NewPage({ slug }) {
             className='relative flex min-h-screen w-full items-center justify-center overflow-hidden'
           >
             <div>
-              {/* <FadeIn delay={0.3}> */}
-              <div
-                className={cn(
-                  eb.className,
-                  'max-w-lg bg-gradient-to-b from-white via-neutral-100 to-neutral-200 bg-clip-text px-4 text-center text-xl font-semibold sm:text-2xl',
-                )}
-              >
-                <TextAnimate animation='blurIn' duration={2} once={true}>
+              <FadeIn delay={0.4}>
+                <div
+                  className={cn(
+                    eb.className,
+                    'max-w-lg bg-gradient-to-b from-white via-neutral-100 to-neutral-200 bg-clip-text px-4 text-center text-xl font-semibold text-transparent sm:text-2xl',
+                  )}
+                >
+                  {/* <TextAnimate animation='blurIn' duration={2} once={true}>
                   Merupakan suatu kehormatan dan kebahagiaan bagi kami, apabila Bapak/Ibu/Saudara/i berkenan hadir dan
                   memberikan doa restu. Atas kehadiran dan doa restunya, kami mengucapkan terima kasih.
-                </TextAnimate>
-                {/* Merupakan suatu kehormatan dan kebahagiaan bagi kami, apabila Bapak/Ibu/Saudara/i berkenan hadir dan
-                  memberikan doa restu. Atas kehadiran dan doa restunya, kami mengucapkan terima kasih. */}
-              </div>
-              {/* </FadeIn> */}
-              <FadeIn delay={0.4}>
+                </TextAnimate> */}
+                  Merupakan suatu kehormatan dan kebahagiaan bagi kami, apabila Bapak/Ibu/Saudara/i berkenan hadir dan
+                  memberikan doa restu. Atas kehadiran dan doa restunya, kami mengucapkan terima kasih.
+                </div>
+              </FadeIn>
+              <FadeIn delay={0.6}>
                 <div className='mt-12 flex justify-center'>
                   <Border />
                 </div>
               </FadeIn>
-              {/* <FadeIn delay={0.5}> */}
-              <div className='mt-8 flex items-center justify-center gap-4 px-4 italic'>
-                {/* <h1
+              <FadeIn delay={0.8}>
+                <div className='mt-8 flex items-center justify-center gap-4 px-4 italic'>
+                  <h1
                     className={cn(
                       eb.className,
                       'bg-gradient-to-b from-white via-neutral-300 to-neutral-500 bg-clip-text py-2 pl-2 text-3xl font-bold italic text-transparent sm:text-4xl md:text-left md:text-5xl',
@@ -757,8 +757,8 @@ export default function NewPage({ slug }) {
                       &
                     </span>{' '}
                     <i>{config.woman}</i>
-                  </h1> */}
-                <h1
+                  </h1>
+                  {/* <h1
                   className={cn(
                     eb.className,
                     'text-transparen bg-gradient-to-b from-white via-neutral-300 to-neutral-500 bg-clip-text py-2 pl-2 text-3xl font-bold italic sm:text-4xl md:text-left md:text-5xl',
@@ -769,9 +769,9 @@ export default function NewPage({ slug }) {
                       Arik & Evin
                     </TextAnimate>
                   </i>
-                </h1>
-              </div>
-              {/* </FadeIn> */}
+                </h1> */}
+                </div>
+              </FadeIn>
             </div>
           </section>
 
@@ -780,11 +780,11 @@ export default function NewPage({ slug }) {
           <section id='bank' className='relative h-full min-h-screen w-full overflow-hidden'>
             <div className='absolute top-0 h-0.5 w-full bg-gradient-to-r from-orange-500 to-sky-500 opacity-10' />
             <div className='pb-28 pt-24'>
-              <h1 className='bg-gradient-to-b from-white to-[#AAAAAA] bg-clip-text p-4 text-center text-5xl font-extrabold md:text-6xl'>
+              <h1 className='bg-gradient-to-b from-white to-[#AAAAAA] bg-clip-text p-4 text-center text-5xl font-extrabold text-transparent md:text-6xl'>
                 <span className={eb.className}>
-                  <TextAnimate animation='slideLeft' once={true} duration={0.5}>
-                    Gift
-                  </TextAnimate>
+                  {/* <TextAnimate animation='slideLeft' once={true} duration={0.5}> */}
+                  Gift
+                  {/* </TextAnimate> */}
                 </span>
               </h1>
               <div className='relative z-10 flex justify-center'>
@@ -820,25 +820,25 @@ export default function NewPage({ slug }) {
                   <div className='flex flex-col items-center justify-center gap-3'>
                     <Image
                       alt='BRI'
-                      src={bri}
-                      sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 3vw'
+                      src='/bri.png'
+                      // sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 3vw'
                       className='object-cover object-center'
                       width={150}
                       height={80}
                     />
+                    <p className='mt-8 text-center text-xl font-semibold text-white sm:text-2xl md:text-3xl'>
+                      {config.woman_card_number}
+                    </p>
                     <p
                       className={cn(
                         eb.className,
-                        'bg-gradient-to-t from-white via-neutral-300 to-neutral-500 bg-clip-text px-2 pb-2 pt-10 text-center text-3xl font-bold italic text-transparent md:text-left md:text-4xl',
+                        'bg-gradient-to-t from-white via-neutral-300 to-neutral-500 bg-clip-text px-2 pb-2  text-center text-3xl font-bold italic text-transparent md:text-left md:text-4xl',
                       )}
                     >
                       <i>{config.woman_fullname} Nasikin A</i>
                     </p>
-                    <p className='text-center text-xl font-semibold text-white sm:text-2xl md:text-3xl'>
-                      {config.woman_card_number}
-                    </p>
                   </div>
-                  <div className='mt-4 flex justify-center'>
+                  <div className='mt-8 flex justify-center'>
                     <button
                       title='Copy Account Number'
                       onClick={() => {
@@ -946,11 +946,11 @@ export default function NewPage({ slug }) {
             </motion.svg>
             <div className='relative flex min-h-screen items-center justify-center'>
               <div>
-                <h1 className='bg-gradient-to-b from-white to-[#AAAAAA] bg-clip-text p-4 text-center text-5xl font-extrabold md:text-6xl'>
+                <h1 className='bg-gradient-to-b from-white to-[#AAAAAA] bg-clip-text p-4 text-center text-5xl font-extrabold text-transparent md:text-6xl'>
                   <span className={eb.className}>
-                    <TextAnimate animation='slideRight' once={true} duration={0.5}>
-                      Countdown
-                    </TextAnimate>
+                    {/* <TextAnimate animation='slideRight' once={true} duration={0.5}> */}
+                    Countdown
+                    {/* </TextAnimate> */}
                   </span>
                 </h1>
                 <div className='relative z-10 mb-16 flex justify-center sm:mb-32'>
