@@ -826,13 +826,13 @@ export default function NewPage({ slug }) {
                       width={150}
                       height={80}
                     />
-                    <p className='mt-8 text-center text-xl font-semibold text-white sm:text-2xl md:text-3xl'>
+                    <p className='mt-8 text-center text-2xl font-semibold text-white md:text-3xl'>
                       {config.woman_card_number}
                     </p>
                     <p
                       className={cn(
                         eb.className,
-                        'bg-gradient-to-t from-white via-neutral-300 to-neutral-500 bg-clip-text px-2 pb-2  text-center text-3xl font-bold italic text-transparent md:text-left md:text-4xl',
+                        'bg-gradient-to-t from-white via-neutral-300 to-neutral-500 bg-clip-text px-2 pb-2 text-center text-3xl font-bold italic text-transparent md:text-left md:text-4xl',
                       )}
                     >
                       <i>{config.woman_fullname} Nasikin A</i>

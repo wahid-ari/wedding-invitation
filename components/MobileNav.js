@@ -648,7 +648,7 @@ export default function MobileNav() {
 
   useEffect(() => {
     if (!modalOpen) {
-      // playAudio();
+      playAudio();
     }
     // [modalOpen, audio]
   }, [modalOpen]);
