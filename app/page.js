@@ -11,7 +11,7 @@ export async function generateMetadata({ searchParams }, parent) {
     else recipient = { name: 'Tamu Undangan' };
   }
   const image = recipient.name !== 'Tamu Undangan' ? `/og?name=${recipient.name}` : '/og.png';
-  const previousImages = (await parent).openGraph?.images || [];
+  // const previousImages = (await parent).openGraph?.images || [];
   return {
     metadataBase: new URL(process.env.NEXT_PUBLIC_WEB_URL),
     title: config.title,
@@ -28,7 +28,7 @@ export async function generateMetadata({ searchParams }, parent) {
       card: 'summary_large_image',
       title: config.title,
       description: config.description,
-      images: [image, ...previousImages],
+      images: [image],
     },
   };
 }

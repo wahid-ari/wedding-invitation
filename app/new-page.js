@@ -13,7 +13,7 @@ import Carousel, { Modal, ModalGateway } from 'react-images';
 
 import styles from '@components/index.module.css';
 
-import bri from '../public/bri.png';
+// import bri from '../public/bri.png';
 
 import '@splidejs/react-splide/css';
 
@@ -30,7 +30,7 @@ import HoverCard from '@components/HoverCard';
 import MobileNav, { Border } from '@components/MobileNav';
 import MyModal from '@components/MyModal';
 import Pattern from '@components/Pattern';
-import { TextAnimate } from '@components/TextAnimate';
+// import { TextAnimate } from '@components/TextAnimate';
 
 const eb = EB_Garamond({ subsets: ['latin'] });
 const merienda = Merienda({ subsets: ['latin'] });
